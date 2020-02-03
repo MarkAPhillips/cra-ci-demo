@@ -20,6 +20,7 @@ jobs:
       - run: yarn lint
       - run: yarn size
       - run: yarn test
+      - run: echo ${SNYK_TOKEN:0:4}
       - snyk/scan:
           fail-on-issues: false
           monitor-on-build: false
