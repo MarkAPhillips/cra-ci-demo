@@ -21,6 +21,8 @@ jobs:
       - run: yarn lint
       - run: yarn size
       - run: yarn test
+      - run: npx cypress cache path
+      - run: npx cypress cache list
       - run: yarn ci:cypress-run
       - snyk/scan:
           fail-on-issues: false
