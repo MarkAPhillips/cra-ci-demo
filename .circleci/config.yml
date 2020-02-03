@@ -21,7 +21,7 @@ jobs:
       - run: yarn lint
       - run: yarn size
       - run: yarn test
-      - run: yarn create cypress
+      - run: npx cypress install
       - run: yarn ci:cypress-run
       - snyk/scan:
           fail-on-issues: false
